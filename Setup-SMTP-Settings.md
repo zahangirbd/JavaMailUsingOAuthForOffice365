@@ -1,5 +1,5 @@
 # Setup Email SMTP Settings for Office365 for OAuth2 Authentication
-A step by step guideline for setting up MTP Settings for Office365 for OAuth2 Authentication
+A step by step guideline for setting up SMTP Settings for Office365 for OAuth2 Authentication
 
 
 
