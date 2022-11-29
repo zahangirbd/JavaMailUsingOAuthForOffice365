@@ -16,10 +16,11 @@ A step by step guideline for setting up SMTP Settings for Office365 for OAuth2 A
 4. Provide **Application Name**.
 5. Choose **Supported Account Types**.
 6. Click > **Register** button. You will be automatically redirected to the new application settings page.
+<img src="./images/4.Step-4.jpg">
+
 7. In the Essentials section at the top of the page, copy the following variables:
 	- Application (Client) ID
 	- Directory (Tenant) ID
-<img src="./images/4.Step-4.jpg">
 <img src="./images/4.Step-4-2.jpg">
 
 
