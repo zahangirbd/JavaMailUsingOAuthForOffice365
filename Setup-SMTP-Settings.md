@@ -1,6 +1,8 @@
 # Setup Email SMTP Settings for Office365 for OAuth2 Authentication
 A step by step guideline for setting up MTP Settings for Office365 for OAuth2 Authentication
 
+
+
 ## Step-by-step: Register an application in Azure Active Directory
 1.  Log into [Azure Portal](https://portal.azure.com/) and navigate to **Azure Active Directory** (AAD).
 <img src="./images/1.Step-1-nav-aad.png">
@@ -20,17 +22,34 @@ A step by step guideline for setting up MTP Settings for Office365 for OAuth2 Au
 <img src="./images/4.Step-4.jpg">
 <img src="./images/4.Step-4-2.jpg">
 
+
+
+
 ## Step-by-step: Provide API permissions to the registered application in **Azure Active Directory** 
 By default, SMTP AUTH is disabled. We need to enable it for an account which will be used to send email through Office365 using OAuth2.
 8. Go back to **Azure Portal > App Registrations > Your App**.
 
 9. From the left menu, select **Authentication**. 
-<img src="./images/9.Step-9.jpg">
+<img src="./images/9.Step-9.png">
 
-10. Choose **Yes** for **"Allow public client flows"**.
+9.1 Click on **+ Add a platform**  
+<img src="./images/9.Step-9-1.png">
+
+9.2 Then select **Mobile and desktop applications**  
+<img src="./images/9.Step-9-2.png">
+
+9.3 Put a **http://localhost** or any valid URL as your ** Custom redirect URIs** 
+<img src="./images/9.Step-9-3.png">
+
+9.4 Press **Configure** button
+
+9.5 Check the appropriate **Supported account types** the appriate one, e.g., **Accounts in this organizational directory only (.... only - Single tenant)**
+
+9.6 Choose **Yes** for **"Allow public client flows"**.
 <img src="./images/10.Step-10.png">
 
-11. Click > **Save** button to apply the changes.
+10. Click > **Save** button to apply the changes.
+
 
 12. From the left menu, select **API Permissions**. 
 <img src="./images/12.Step-12.png">
@@ -49,10 +68,13 @@ By default, SMTP AUTH is disabled. We need to enable it for an account which wil
 <img src="./images/16.Step-16.png">
 
 17. Select **User.read** in the **User** section. 
-<img src="./images/18.Step-18.png">
+<img src="./images/17.Step-17.png">
 
 19. Click > **Add permissions** button. This will add two permissions to the application (see below).
 <img src="./images/12.Step-12.png"> 
+
+
+
 
 ## Step-by-step: Enable SMTP AUTH for specific mailboxes
 By default, SMTP AUTH is disabled. We need to enable it for an account which will be used to send email through Office365 using OAuth2.
