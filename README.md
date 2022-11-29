@@ -8,15 +8,17 @@ Thus, the primary targets are:
   - to list down the the MS configurations for reading emails from Microsoft Office365 or Outlook in Java using OAuth2
 
 ### Pre-requisites: Setup Email SMTP Settings for Office365 with OAuth2 Authentication
-A step by step setup is available [here](https://github.com/zahangirbd/JavaMailUsingOAuthForOffice365/blob/main/Setup-SMTP-Settings.md#setup-email-smtp-settings-for-office365-for-oauth2-authentication).
-Once we complete the setup, we shall copy the following items from [Azure Portal](https://portal.azure.com/)
+1. A step by step setup guideline is available [here](https://github.com/zahangirbd/JavaMailUsingOAuthForOffice365/blob/main/Setup-SMTP-Settings.md#setup-email-smtp-settings-for-office365-for-oauth2-authentication).
+
+2. Once we complete the setup, we shall copy the following items from [Azure Portal](https://portal.azure.com/)
+
 	```shell
 	- Application (Client) ID
 	- Directory (Tenant) ID
-	``` 
+	```
 
 ### Setup the Java project
-1. We can setup the project any of these 
+1. We can setup this project by any of the following two options 
 	- Import this java project into IDE (e.g., eclipse) as a **gradle** project  
 	- Prepare this java project for eclipse by following command and then open the project into IDE 
 		```shell
@@ -33,6 +35,7 @@ We will need **Application (Client) ID**, **Directory (Tenant) ID**, **redirectU
 	redirectUrl=http://localhost
 	toAddresses=<TO_EMAIL_ADDRESSES>
 	``` 
+
 3. Run the following Java class file 
 	```shell
 		org.zahangirbd.email.EmailSender
