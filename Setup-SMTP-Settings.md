@@ -3,7 +3,7 @@ A step by step guideline for setting up MTP Settings for Office365 for OAuth2 Au
 
 
 
-## Step-by-step: Register an application in Azure Active Directory
+## A) Step-by-step: Register an application in Azure Active Directory
 1.  Log into [Azure Portal](https://portal.azure.com/) and navigate to **Azure Active Directory** (AAD).
 <img src="./images/1.Step-1-nav-aad.png">
 
@@ -25,7 +25,7 @@ A step by step guideline for setting up MTP Settings for Office365 for OAuth2 Au
 
 
 
-## Step-by-step: Provide API permissions to the registered application in **Azure Active Directory** 
+## B) Step-by-step: Provide API permissions to the registered application in **Azure Active Directory** 
 By default, SMTP AUTH is disabled. We need to enable it for an account which will be used to send email through Office365 using OAuth2.
 8. Go back to **Azure Portal > App Registrations > Your App**.
 
@@ -76,7 +76,7 @@ By default, SMTP AUTH is disabled. We need to enable it for an account which wil
 
 
 
-## Step-by-step: Enable SMTP AUTH for specific mailboxes
+## C) Step-by-step: Enable SMTP AUTH for specific mailboxes
 By default, SMTP AUTH is disabled. We need to enable it for an account which will be used to send email through Office365 using OAuth2.
 
 ### Use the Microsoft 365 admin center to enable or disable SMTP AUTH on specific mailboxes
