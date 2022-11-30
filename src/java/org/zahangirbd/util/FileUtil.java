@@ -3,6 +3,8 @@ package org.zahangirbd.util;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 public class FileUtil {
@@ -48,4 +50,35 @@ public class FileUtil {
         }
         return prop;
     }
+	
+    /**
+     * Use Files class from Java 1.7 to write files, internally uses OutputStream
+     * @param filePath The file full path, e.g., /Users/zahangirbd/files.txt
+     * @param data
+     */
+    public static void writeIntoFile(String filePath, String data) {
+        try {
+        	Files.write(Paths.get(filePath), data.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("writeIntoFile(filePath,data): Exception = " + e.getMessage());
+        }
+    }
+    
+    /**
+     * 
+     * @param filePath
+     * @param data
+     */
+    public static String readFile(String filePath) {
+    	String data = null;
+        try {
+        	data = Files.readString(Paths.get(filePath));
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("readFile(filePath): filePath='" + filePath + "', Exception = " + e.getMessage());
+        }
+        return data;
+    }
+
 }

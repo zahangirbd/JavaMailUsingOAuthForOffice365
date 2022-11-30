@@ -54,6 +54,7 @@ public class EmailSender {
             transport.connect("smtp.office365.com", userName, null);
             transport.issueCommand("AUTH XOAUTH2 " + token, 235);
             transport.sendMessage(m1, m1.getAllRecipients());
+            System.out.println("sendTestMail(...): A Test email has been sent to " + toAddresses + " successfully.");
         } catch (NoSuchProviderException e) {
             e.printStackTrace();
         }

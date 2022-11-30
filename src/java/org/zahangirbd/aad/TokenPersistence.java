@@ -28,6 +28,7 @@ class TokenPersistence implements ITokenCacheAccessAspect {
 	public void afterCacheAccess(ITokenCacheAccessContext iTokenCacheAccessContext) {
 		data = iTokenCacheAccessContext.tokenCache().serialize();
 		// TODO - we can implement logic here to write changes to file if we need to do
+		// FileUtil.writeIntoFile("cache_data/token_serialized_cache.json", data);
 	}
 	
 	/**
@@ -39,7 +40,9 @@ class TokenPersistence implements ITokenCacheAccessAspect {
 		
 		// Loads cache from resource file
 		String dataToInitCache = FileUtil.readDataFromResFile(TokenPersistence.class, "cache_data/sample_token_serialized_cache.json");
-		ITokenCacheAccessAspect persistenceAspect = new TokenPersistence(dataToInitCache);
-		return persistenceAspect;
+		//String dataToInitCache = FileUtil.readFile("cache_data/token_serialized_cache.json");
+
+		TokenPersistence.instance = new TokenPersistence(dataToInitCache);
+		return TokenPersistence.instance;
 	}
 }
